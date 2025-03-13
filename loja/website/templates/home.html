@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Loja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Loja</h1>
+        
+        <div class="section">
+            <h2>Cadastro</h2>
+            <a href="{% url 'cadastro_clientes' %}" class="btn">Cadastrar Cliente</a>
+            <a href="{% url 'cadastro_produtos' %}" class="btn">Cadastrar Produto</a>
+            <a href="{% url 'cadastro_pedidos' %}" class="btn">Cadastrar Pedido</a>
+        </div>
+        
+        <div class="section">
+            <h2>Listas</h2>
+            <a href="{% url 'lista_clientes' %}" class="btn">Lista de Clientes</a>
+            <a href="{% url 'lista_produtos' %}" class="btn">Lista de Produtos</a>
+            <a href="{% url 'lista_pedidos' %}" class="btn">Lista de Pedidos</a>
+        </div>
+    </div>
+</body>
+</html>
