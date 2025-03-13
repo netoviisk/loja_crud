@@ -1,0 +1,26 @@
+CREATE DATABASE loja_bd;
+
+USE loja_bd;
+
+CREATE TABLE clientes(
+	id_clientes INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(20)
+);
+
+CREATE TABLE produtos(
+	id_produtos INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    descricao VARCHAR(1000),
+    preco FLOAT
+);
+
+CREATE TABLE pedidos(
+	id_pedidos INT PRIMARY KEY AUTO_INCREMENT,
+    data_pedido DATE,
+    pedidos_id_produtos INT,
+    clientes_id_clientes INT,
+    FOREIGN KEY (pedidos_id_produtos) REFERENCES produtos(id_produtos),
+    FOREIGN KEY (clientes_id_clientes) REFERENCES clientes(id_clientes)
+);
